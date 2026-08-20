@@ -1052,22 +1052,14 @@
     return {
       layout: 'cover',
       section: '표지',
-      title: 'Gemini & Workspace 실전 통제술',
+      title: 'Google의 생성형 AI Gemini를 활용한 행정 업무 경감과 AI 리터러시 학습',
       body: `
         <div class="cover-grid course-cover">
-          <h1 class="cover-title">Gemini &amp; Workspace<em>실전 통제술</em></h1>
-          <p class="cover-subtitle">특성화고 교사를 위한 <strong>평가계획 기반 100분 실습</strong></p>
-          <aside class="cover-principles">
-            <h2>오늘의 통제 원칙</h2>
-            <ol>
-              <li><b>01</b><span>평가계획을 근거로 고정한다</span></li>
-              <li><b>02</b><span>서술과 직접 증거를 구분한다</span></li>
-              <li><b>03</b><span>게시·평가·자동 실행은 교사가 결정한다</span></li>
-            </ol>
-          </aside>
+          <h1 class="cover-title">Google의 생성형 AI Gemini를 활용한<em>행정 업무 경감과 AI 리터러시 학습</em></h1>
+          <p class="cover-subtitle">종로산업정보학교 교사 <strong>이진선</strong></p>
           <div class="course-cover-case">
             <span>공통 교과 맥락</span>
-            <strong>특성화고 프로그래밍 수업·평가 업무</strong>
+            <strong>전문교과 수업·평가 업무</strong>
             <p>도구마다 입력·결과·통제 지점을 다르게 설계</p>
           </div>
           <div class="cover-timing">1부 50분 · 휴식 10분 · 2부 50분 · 총 ${outline.length - hiddenSlides.size}장</div>

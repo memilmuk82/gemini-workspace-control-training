@@ -3103,6 +3103,17 @@ output {
   border-top: 1px solid var(--line);
 }
 
+.course-cover .cover-title {
+  width: 1380px;
+  font-size: 70px;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.course-cover .cover-title em {
+  margin-top: 12px;
+}
+
 .course-cover .course-cover-case {
   position: absolute;
   right: 86px;

@@ -4,7 +4,7 @@ window.COURSE_OUTLINE = [
     "number": 1,
     "section": "시작",
     "type": "표지",
-    "overview": "Gemini & Workspace 실전 통제술과 100분 실습의 목적"
+    "overview": "Google의 생성형 AI Gemini를 활용한 행정 업무 경감과 AI 리터러시 학습"
   },
   {
     "number": 2,

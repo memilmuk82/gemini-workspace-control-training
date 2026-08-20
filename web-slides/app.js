@@ -77,7 +77,7 @@
     counter.value = `${nextIndex + 1} / ${slides.length}`;
     prevButton.disabled = nextIndex === 0;
     nextButton.disabled = nextIndex === slides.length - 1;
-    document.title = `${nextIndex + 1}. ${slides[nextIndex]?.title || 'Gemini & Workspace 실전 통제술'}`;
+    document.title = `${nextIndex + 1}. ${slides[nextIndex]?.title || 'Google의 생성형 AI Gemini를 활용한 행정 업무 경감과 AI 리터러시 학습'}`;
     const hash = `#/slide/${nextIndex + 1}`;
     if (replace) window.history.replaceState(null, '', hash);
     else if (window.location.hash !== hash) window.location.hash = hash;

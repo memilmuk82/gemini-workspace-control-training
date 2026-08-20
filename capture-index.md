@@ -1,6 +1,6 @@
 # Evidence Capture Index
 
-- 프로젝트: 특성화고 교사를 위한 Gemini & Workspace 실전 통제술
+- 프로젝트: Google의 생성형 AI Gemini를 활용한 행정 업무 경감과 AI 리터러시 학습
 - 기준일: 2026-08-20 (Asia/Seoul)
 - 상태값: `planned` → `captured` → `verified` / `blocked`
 - 개인정보 원칙: 실제 학생 이름·이메일·제출물·성적을 캡처하지 않는다. 프로필 메뉴와 계정 주소는 프레임에서 제외한다.

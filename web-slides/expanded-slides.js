@@ -114,7 +114,7 @@
   const first = '1부 · 0–50분';
   const second = '2부 · 0–50분';
 
-  slides.push(reuse('Gemini & Workspace 실전 통제술'));
+  slides.push(reuse('Google의 생성형 AI Gemini를 활용한 행정 업무 경감과 AI 리터러시 학습'));
   slides.push(reuse('AI를 잘 쓰는 법보다, 통제하는 법', {
     title: '빠른 생성보다 근거와 결정권이 먼저다',
     minute: '1부 · 0–2분',

@@ -88,19 +88,11 @@
     {
       layout: 'cover',
       section: '표지',
-      title: 'Gemini & Workspace 실전 통제술',
+      title: 'Google의 생성형 AI Gemini를 활용한 행정 업무 경감과 AI 리터러시 학습',
       body: `
         <div class="cover-grid">
-          <h1 class="cover-title">Gemini &amp; Workspace<em>실전 통제술</em></h1>
-          <p class="cover-subtitle">특성화고 교사를 위한 <strong>근거 중심 AI 업무 설계</strong></p>
-          <aside class="cover-principles">
-            <h2>오늘의 통제 원칙</h2>
-            <ol>
-              <li><b>01</b><span>입력자료의 경계를 먼저 정한다</span></li>
-              <li><b>02</b><span>생성물보다 근거를 확인한다</span></li>
-              <li><b>03</b><span>게시·평가는 사람이 결정한다</span></li>
-            </ol>
-          </aside>
+          <h1 class="cover-title">Google의 생성형 AI Gemini를 활용한<em>행정 업무 경감과 AI 리터러시 학습</em></h1>
+          <p class="cover-subtitle">종로산업정보학교 교사 <strong>이진선</strong></p>
           <div class="route-strip" aria-label="교육 흐름">
             ${['Classroom', 'Prompt', 'Harness', 'Verification Loop', 'Classic Gems', 'Notebook', 'Studio', 'New Gems', 'Spark / Skills']
               .map((label, index) => `<span class="route-node ${[2, 3].includes(index) ? 'is-control' : ''}"><i>${index + 1}</i>${label}</span>`)
