@@ -47,6 +47,9 @@
 
 `web-slides/index.html`을 로컬 웹 서버로 열면 된다. 주소 뒤에 `#/slide/1`처럼 슬라이드 번호를 붙여 바로 이동할 수 있다.
 
+- 공개 연수 자료: <https://memilmuk82.github.io/gemini-workspace-control-training/>
+- Padlet에는 위 주소를 링크로 추가하면 첫 슬라이드부터 바로 열린다.
+
 - `←` `→`: 이전/다음 슬라이드
 - `F`: 전체화면
 - `P`: 전체 슬라이드 인쇄 또는 PDF 저장
