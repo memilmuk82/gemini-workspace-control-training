@@ -1,6 +1,12 @@
 # Local browser sessions contain cookies and account state. Never commit them.
 .browser-profiles/
 capture-harness/.artifacts/
+web-slides/.artifacts/
+output/qa/
+/output/pdf-qa/
+/output/source-review/
+/tmp/
+/captures/captures/
 
 # Temporary automation output
 *.tmp

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="특성화고 교사를 위한 Gemini & Workspace 실전 통제술 100분 연수"
+    />
+    <title>Gemini & Workspace 실전 통제술</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="app" class="app" aria-live="polite">
+      <div id="deck" class="deck" aria-label="웹 슬라이드"></div>
+
+      <nav class="deck-controls" aria-label="프레젠테이션 컨트롤">
+        <button id="prev" class="control-button" type="button" aria-label="이전 슬라이드">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+        </button>
+        <output id="counter" class="slide-counter" aria-label="현재 슬라이드"></output>
+        <button id="next" class="control-button" type="button" aria-label="다음 슬라이드">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+        </button>
+        <span class="control-divider" aria-hidden="true"></span>
+        <button id="fullscreen" class="control-button" type="button" aria-label="전체 화면">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5" />
+          </svg>
+        </button>
+        <button id="print" class="control-button" type="button" aria-label="PDF 인쇄">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v7H6z" />
+          </svg>
+        </button>
+      </nav>
+
+      <div class="shortcut-hint" aria-hidden="true">← → 이동 · F 전체화면 · P PDF</div>
+    </main>
+
+    <noscript>이 프레젠테이션은 슬라이드 이동을 위해 JavaScript가 필요합니다.</noscript>
+    <script src="course-outline.generated.js"></script>
+    <script src="course-slides.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

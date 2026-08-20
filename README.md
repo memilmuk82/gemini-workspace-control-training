@@ -4,11 +4,14 @@
 
 ## 현재 상태
 
-- Evidence Capture 56개 완료
+- 평가계획 연계 Evidence Capture 136개 검증 항목 정리 완료
 - 교육용·개인 Google 계정의 기능 차이 기록 완료
 - 실제 학생 개인정보·평가 데이터 미사용 확인
-- 캡처 파일과 `capture-index.md` 56행 일치 확인
-- HTML/CSS/Vanilla JavaScript 웹 슬라이드 제작 예정
+- 단계·계정·실행·결과·공식 출처·슬라이드 용도를 `captures/course-aligned/capture-index.md`에 기록
+- HTML/CSS/Vanilla JavaScript 웹 슬라이드 153장 제작 완료
+- `#/slide/1` 라우팅·키보드 이동·전체화면·PDF 인쇄 구현
+- 과정의 맥락이 끊기지 않도록 입력·결과를 분리하거나 함께 제시하고, 필요한 장면만 제한적으로 확대
+- 153페이지 16:9 배포용 PDF 생성 및 전체 페이지 렌더링 검수 완료
 
 ## 연수 흐름
 
@@ -22,17 +25,31 @@
 8. New Gems from Google Labs
 9. Gemini Spark / Skills
 
-`Harness`와 `Verification Loop`는 Google의 공식 기능명이 아니라 이 연수의 통제 프레임이다.
+`Harness`는 목표·자료·금지·출력·실패·검증 조건을 설계하는 방법이고, `Verification Loop`는 초안·검토·수정을 반복하는 방법이다.
 
 ## 주요 파일
 
-- `capture-index.md`: 캡처별 계정 유형·단계·실행 내용·결과·공식 출처·슬라이드 용도
+- `capture-index.md`: 현재 평가계획 연계 캡처 인덱스와 레거시 자료의 구분
+- `captures/course-aligned/capture-index.md`: 새 캡처별 계정 유형·단계·실행 내용·결과·공식 출처·슬라이드 용도
 - `evidence-run-log.md`: 실제 실행 기록과 공식 문서·UI 차이
 - `privacy-review.md`: 개인정보 검수 결과와 공개본 처리 원칙
 - `evidence-capture-plan.md`: 캡처 범위와 안전 원칙
 - `captures/`: 실제 Google UI 단계별 캡처
 - `test-data/`: 학생 개인정보가 없는 연수용 합성 입력
+- `materials/연수용-파이썬프로그래밍-평가계획.pdf`: 자신의 평가계획이 없을 때 사용할 다운로드용 예시
+- `materials/연수용-Classroom-루브릭-시트.xlsx`: Classroom 루브릭 내보내기 결과를 확인하는 실습용 시트
 - `capture-harness/`: 교육/개인 계정을 분리한 로컬 Evidence Capture 도구
+- `web-slides/`: 편집·발표·PDF 출력용 웹 슬라이드 마스터
+- `design/`: 디자인 시스템·강의 구조·초기 콘셉트 기록
+- `output/pdf/gemini-workspace-control-training.pdf`: 오프라인·배포용 153페이지 PDF
+
+## 웹 슬라이드 열기
+
+`web-slides/index.html`을 로컬 웹 서버로 열면 된다. 주소 뒤에 `#/slide/1`처럼 슬라이드 번호를 붙여 바로 이동할 수 있다.
+
+- `←` `→`: 이전/다음 슬라이드
+- `F`: 전체화면
+- `P`: 전체 슬라이드 인쇄 또는 PDF 저장
 
 ## 웹 슬라이드 요구사항
 

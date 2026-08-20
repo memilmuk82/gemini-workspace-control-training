@@ -297,14 +297,16 @@ async function handleCommand(context, state, command) {
       const left = Number(command.left);
       await scrollRoot.evaluate(
         (element, position) => {
-          const scrollingElement = element.ownerDocument.scrollingElement || element;
+          const scrollingElement = position.useElement
+            ? element
+            : element.ownerDocument.scrollingElement || element;
           scrollingElement.scrollTo({
             top: Number.isFinite(position.top) ? position.top : scrollingElement.scrollTop,
             left: Number.isFinite(position.left) ? position.left : scrollingElement.scrollLeft,
             behavior: 'instant',
           });
         },
-        { top, left },
+        { top, left, useElement: Boolean(command.selector) && command.document !== true },
       );
       return { scrolled: true, top, left };
     }
@@ -323,6 +325,45 @@ async function handleCommand(context, state, command) {
         });
       }
       return { count, candidates };
+    }
+
+    case 'scrollables': {
+      const items = await rootForFrameSelectors(
+        page,
+        command.frameSelector,
+        command.frameSelectors,
+      ).locator('*').evaluateAll((elements) =>
+        elements
+          .map((element) => {
+            const style = getComputedStyle(element);
+            const vertical = element.scrollHeight > element.clientHeight + 2;
+            const horizontal = element.scrollWidth > element.clientWidth + 2;
+            const canScroll = /(auto|scroll)/.test(
+              `${style.overflow} ${style.overflowX} ${style.overflowY}`,
+            );
+            if ((!vertical && !horizontal) || !canScroll || element.clientWidth < 200) {
+              return null;
+            }
+            return {
+              tag: element.tagName.toLowerCase(),
+              id: element.id || '',
+              className:
+                typeof element.className === 'string'
+                  ? element.className.slice(0, 300)
+                  : '',
+              ariaLabel: element.getAttribute('aria-label') || '',
+              clientWidth: element.clientWidth,
+              clientHeight: element.clientHeight,
+              scrollWidth: element.scrollWidth,
+              scrollHeight: element.scrollHeight,
+              scrollLeft: element.scrollLeft,
+              scrollTop: element.scrollTop,
+            };
+          })
+          .filter(Boolean)
+          .slice(0, 40),
+      );
+      return { count: items.length, items };
     }
 
     case 'click': {
@@ -355,7 +396,12 @@ async function handleCommand(context, state, command) {
       if (typeof command.key !== 'string' || command.key.length > 50) {
         throw new Error('유효한 key 문자열이 필요합니다.');
       }
-      await page.keyboard.press(command.key);
+      if (command.target) {
+        const locator = await requireUniqueLocator(page, command.target);
+        await locator.press(command.key);
+      } else {
+        await page.keyboard.press(command.key);
+      }
       return { pressed: command.key };
     }
 
