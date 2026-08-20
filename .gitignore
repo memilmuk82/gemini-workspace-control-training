@@ -1,0 +1,13 @@
+# Local browser sessions contain cookies and account state. Never commit them.
+.browser-profiles/
+capture-harness/.artifacts/
+
+# Temporary automation output
+*.tmp
+*.log
+
+# ChatGPT project mirror metadata and synced references are not repository source.
+/AGENTS.md
+/.agents/
+/.codex/
+/sources/
